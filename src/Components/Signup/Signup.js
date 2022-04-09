@@ -57,15 +57,15 @@ const Signup = () => {
               value={userType}
             >
               <FormControlLabel
-                value="loginAsSeller"
+                value="buyer"
                 control={<Radio />}
-                label="Sign Up as a Seller"
+                label="Sign Up as a Buyer"
               />
 
               <FormControlLabel
-                value="loginAsBuyer"
+                value="seller"
                 control={<Radio />}
-                label="Sign Up as a Buyer"
+                label="Sign Up as a Seller"
               />
             </RadioGroup>
           </FormControl>
@@ -94,7 +94,7 @@ const Signup = () => {
                 type="text"
                 id="farmName"
                 className="formFieldInput"
-                placeholder="Enter Your Name"
+                placeholder="Enter Your Farm Name"
                 name="farmName"
                 value={user.farmName}
                 onChange={handleChange}
