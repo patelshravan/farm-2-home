@@ -1,20 +1,40 @@
 import React from "react";
-import { Card, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
+import { Card } from "@mui/material";
+
 import { Button } from "../Button/Button";
 
 const HomePageBuyer = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/profileBuyer");
+  };
+  const handleViewItems = () => {
+    navigate("/viewItemsBuyer");
+  };
+  const goToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <React.Fragment>
       <div style={{ marginTop: "15px" }}>
         <Button
-          onClick={() => {
-            console.log("CLicked!");
-          }}
+          onClick={handleClick}
           type="button"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
           Profile
+        </Button>
+        <Button
+          type="button"
+          buttonStyle="btn--primary"
+          buttonSize="btn--large"
+          onClick={goToCart}
+        >
+          Cart
         </Button>
       </div>
       <Card
@@ -29,11 +49,11 @@ const HomePageBuyer = () => {
         }}
       >
         <div>
-          <Button variant="contained">Orders</Button>
-        </div>
-
-        <div>
-          <Button variant="contained">Profile</Button>
+          <Button buttonStyle="btn--success--outline">Orders</Button>
+          <Button buttonStyle="btn--success--outline">Profile</Button>
+          <Button buttonStyle="btn--success--outline" onClick={handleViewItems}>
+            View Items
+          </Button>
         </div>
       </Card>
     </React.Fragment>

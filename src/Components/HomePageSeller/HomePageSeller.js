@@ -1,12 +1,48 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Card, Button } from "@mui/material";
+import { Button } from "../Button/Button";
+
+import { Card } from "@mui/material";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 
 import "./HomePageSeller.css";
 
 const HomePageSeller = () => {
+  const navigate = useNavigate();
+  const handleProfileButton = () => {
+    navigate("/profileSeller");
+  };
+  const handleAddItemsButton = () => {
+    navigate("/addItems");
+  };
+  const handleViewItemsButton = () => {
+    navigate("/viewItems");
+  };
+  const handleViewOrdersButton = () => {
+    navigate("/vieworders");
+  };
   return (
     <React.Fragment>
+      <div style={{ marginTop: "15px" }}>
+        <Button
+          onClick={handleProfileButton}
+          type="button"
+          buttonStyle="btn--primary"
+          buttonSize="btn--large"
+        >
+          <PermIdentityIcon />
+          Profile
+        </Button>
+        <Button
+          onClick={handleViewItemsButton}
+          type="button"
+          buttonStyle="btn--primary"
+          buttonSize="btn--large"
+        >
+          View Items
+        </Button>
+      </div>
       <Card
         sx={{
           bgcolor: "gray",
@@ -19,15 +55,35 @@ const HomePageSeller = () => {
         }}
       >
         <div>
-          <Button variant="contained">Add Items</Button>
+          <Button
+            onClick={handleAddItemsButton}
+            buttonStyle="btn--success--outline"
+          >
+            Add Items
+          </Button>
 
-          <Button variant="contained">View Orders</Button>
+          <Button
+            buttonStyle="btn--success--outline"
+            onClick={handleViewOrdersButton}
+          >
+            View Orders
+          </Button>
         </div>
 
         <div>
-          <Button variant="contained">View Items</Button>
+          <Button
+            onClick={handleViewItemsButton}
+            buttonStyle="btn--success--outline"
+          >
+            View Items
+          </Button>
 
-          <Button variant="contained">Profile</Button>
+          <Button
+            onClick={handleProfileButton}
+            buttonStyle="btn--success--outline"
+          >
+            Profile
+          </Button>
         </div>
       </Card>
     </React.Fragment>

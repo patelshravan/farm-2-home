@@ -16,7 +16,8 @@
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
+  opacity: 0.5;
 }
 
 /* Button Colors and Styles */
@@ -86,6 +87,11 @@
 }
 
 /* Button Size */
+
+.btn--small {
+  padding: 5px 15px;
+  font-size: 15px;
+}
 
 .btn--medium {
   padding: 10px 20px;
