@@ -1,92 +1,30 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { Button } from "../Button/Button";
-
-import { Card } from "@mui/material";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-
+import NavbarSeller from "../NavbarSeller/NavbarSeller";
 import "./HomePageSeller.css";
 
 const HomePageSeller = () => {
-  const navigate = useNavigate();
-  const handleProfileButton = () => {
-    navigate("/profileSeller");
-  };
-  const handleAddItemsButton = () => {
-    navigate("/addItems");
-  };
-  const handleViewItemsButton = () => {
-    navigate("/viewItems");
-  };
-  const handleViewOrdersButton = () => {
-    navigate("/vieworders");
-  };
   return (
-    <React.Fragment>
-      <div style={{ marginTop: "15px" }}>
-        <Button
-          onClick={handleProfileButton}
-          type="button"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-        >
-          <PermIdentityIcon />
-          Profile
-        </Button>
-        <Button
-          onClick={handleViewItemsButton}
-          type="button"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-        >
-          View Items
-        </Button>
+    <>
+      <NavbarSeller />
+      <div className="box">
+        <div className="subBox">
+          <NavLink className="firstNav" to="/addItems">
+            ➕ Add Items
+          </NavLink>
+          <NavLink className="firstNav" to="/viewOrders">
+            🔍 View Orders
+          </NavLink>
+          <NavLink className="firstNav" to="/viewItems">
+            🕵 View Items
+          </NavLink>
+          <NavLink className="firstNav" to="/profileSeller">
+            👦 Profile
+          </NavLink>
+        </div>
       </div>
-      <Card
-        sx={{
-          bgcolor: "gray",
-          boxShadow: 2,
-          borderRadius: 2,
-          p: 3,
-          mt: 15,
-          ml: 38,
-          width: "50%",
-        }}
-      >
-        <div>
-          <Button
-            onClick={handleAddItemsButton}
-            buttonStyle="btn--success--outline"
-          >
-            Add Items
-          </Button>
-
-          <Button
-            buttonStyle="btn--success--outline"
-            onClick={handleViewOrdersButton}
-          >
-            View Orders
-          </Button>
-        </div>
-
-        <div>
-          <Button
-            onClick={handleViewItemsButton}
-            buttonStyle="btn--success--outline"
-          >
-            View Items
-          </Button>
-
-          <Button
-            onClick={handleProfileButton}
-            buttonStyle="btn--success--outline"
-          >
-            Profile
-          </Button>
-        </div>
-      </Card>
-    </React.Fragment>
+    </>
   );
 };
 

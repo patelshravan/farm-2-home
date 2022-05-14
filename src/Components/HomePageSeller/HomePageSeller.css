@@ -1,0 +1,23 @@
+.box {
+  text-align: center;
+  justify-content: end;
+  display: flex;
+  padding: 40px 20px 0px 0px;
+}
+
+.subBox {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 15%;
+  box-shadow: 1px 1px 7px 7px rgb(207, 207, 207);
+  padding-top: 40px;
+  border-radius: 60px;
+  flex-direction: column;
+}
+
+.firstNav {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
