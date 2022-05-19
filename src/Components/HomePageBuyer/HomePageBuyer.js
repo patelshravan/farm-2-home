@@ -13,6 +13,9 @@ const HomePageSeller = () => {
           <NavLink className="firstNav" to="/viewOrders">
             ➕ Orders
           </NavLink>
+          <NavLink className="firstNav" to="/viewOrders">
+            ➕ Orders
+          </NavLink>
           <NavLink className="firstNav" to="/viewItems">
             🕵 View Items
           </NavLink>
