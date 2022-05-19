@@ -16,9 +16,6 @@ const HomePageSeller = () => {
           <NavLink className="firstNav" to="/viewItems">
             🕵 View Items
           </NavLink>
-          <NavLink className="firstNav" to="/viewItems">
-            🕵 View Items
-          </NavLink>
           <NavLink className="firstNav" to="/profileBuyer">
             👦 Profile
           </NavLink>
