@@ -31,7 +31,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const backtoLogin = () => {
-    navigate("/");
+    navigate("/signup");
   };
 
   const handleSubmit = () => {
